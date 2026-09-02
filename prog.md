@@ -28,8 +28,30 @@ Gala atzīme iedod ja eksāmens sekmīgs
 
 # Programmēšanas pamati
 ## Algoritms
+### Definīcijas
 - Algoritms ir precīzu viennozīmīgu instrukciju virkne, kuru izpildes 
 rezultātā tiek atrisināts noteikts uzdevums
 - Algorits ir sakārtots viennozīmīgu un izpildāmu
 etapu kopums, kas apraksta noteiktu pabeigtu procesu
+
+### Īpašības
+- Precīza noteikta ieja un izeja
+- Viennozīmība
+- Nobeigtība
+- Efektivitāte un izpildāmība
+
+### Saturs
+- Izpildāmās konstrukcijas
+- Vadības konstrukcijas
+
+bus jataisa blokshemas iespejams
+
+## sūdīgi priekštati par programmēšnu
+- jābūt labam matemātikas
+- garlaicīgi ta ir
+- jāiegaumē valodas no galvas
+
+## Kas ir datorprogramma
+- Programma ir specializēts sakārtotu operāciju kopums
+- detalizēts plāns
 
