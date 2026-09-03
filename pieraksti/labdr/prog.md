@@ -7,3 +7,4 @@ Noderīgi:
 - **lu.lv**
 - **estudijas.lu.lv**
 - **itservis.lu.lv**
+<!-- man, i cant take it here -->
