@@ -31,3 +31,6 @@ ble te bus dirsa
 5. Virtuālais dators
 <!-- idk man jau zb ir -->
 
+idk man te boring
+
+like fuck so

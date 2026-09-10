@@ -81,7 +81,25 @@ Ik pēc 2 (vai 18 mēneši) gadiem tranzistori čipos dubultojas
 - 10-20MB HD
 
 Tirgū:
+- paredzēts 250k/5gados
+- reāli 250k/mēnesī
 
--- paredzēts 250k/5gados
+## 8 Lielās idejas
+### Abstrakcija
+Lieto lai vienkāršotu dizainu
 
--- reāli 250k/mēnesī
+### Paralelā izpilde
+Uzlabo veiktspēju ar paralēlu izpildi
+
+### Konveijera princips
+Uzlabo veiktspēju ar konveijera pricipu
+
+### Paredzēšana
+Uzlabo veiktspēju ar paredzēšanu
+
+### Atmiņu hierarhija
+uzlabo veiktspēju ar atmiņas hierarhiju
+
+### Uzticimīiva ar rezervi
+Uzlabo uzticamību, drošumu ar papildus rezervēm
+
