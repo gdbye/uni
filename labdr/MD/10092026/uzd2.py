@@ -32,3 +32,11 @@ c_digit, c = digit_sum()
 test(a_digit, b, c, a)
 test(b_digit, a, c, b)
 test(c_digit, a, b, c)
+
+"""
+    ievade     |      paredzamais rezultāts
+------------------------------
+    12 25 20   |
+    15 20 23   |      23
+    12 20 23   |      12
+"""

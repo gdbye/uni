@@ -26,7 +26,7 @@ int digit_sum(int x) {
 // Pārbauda vai ir patiess un izprintē to ja iznākums ir derīgs
 void test(int x_digit, int x, int y, int z) {
   if (x_digit == abs(y - z))
-    cout << x;
+    cout << x << "\n";
 }
 
 int main() {
@@ -57,3 +57,11 @@ int main() {
   }
   return 0;
 }
+
+/******************************
+  ievade       |      paredzamais rezultaāts
+------------------------------
+    12 25 20   |
+    15 20 23   |      23
+    12 20 23   |      12
+*******************************/
