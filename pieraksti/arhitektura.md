@@ -85,8 +85,14 @@ Tirgū:
 - reāli 250k/mēnesī
 
 ## 8 Lielās idejas
+### Mūra likums
+Projektē ņemot vērā Mūra likumu
+
 ### Abstrakcija
 Lieto lai vienkāršotu dizainu
+
+### Biežais ātrāk
+Paātrini biežāk lietotās lietas
 
 ### Paralelā izpilde
 Uzlabo veiktspēju ar paralēlu izpildi
@@ -102,4 +108,7 @@ uzlabo veiktspēju ar atmiņas hierarhiju
 
 ### Uzticimīiva ar rezervi
 Uzlabo uzticamību, drošumu ar papildus rezervēm
+
+## Zem vāka
+
 

@@ -142,3 +142,10 @@ galvenais double izmantot nevis int
 
 ### Cikli
 Atkārtojas viens un tas pats vairākas reizes
+
+## 2. stunda
+kinda stāsta basic shit par c++ un python
+``` cpp
+cout << "izvade";
+cin >> ievade;
+```
