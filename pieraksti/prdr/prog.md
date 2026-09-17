@@ -149,3 +149,121 @@ kinda stāsta basic shit par c++ un python
 cout << "izvade";
 cin >> ievade;
 ```
+
+## 3. stunda
+### pirms tam 2. stunda uzd
+```cpp
+a=b=c=49
+```
+izpildas c=49 => c=b => b=a
+
+``` cpp
+mult*=x++
+
+mult = mult * x
+x = x + 1
+//1. mult = mult * x
+//2. x=x+1
+```
+### Aritmētiskie operātori
+#### +
+Saskaita
+#### -
+Atņem
+#### *
+Reizina
+#### /
+Dala
+#### %
+Atlikums
+``` cpp
+cout << 9 % 2;
+//izprintē 1
+```
+### Salīdzināšana
+<, >, ==, !=, <=, >=
+
+izvada true or false
+
+### uzd
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    int x, y;
+    cout << "Ievadi a ==>";
+    cin >> a;
+    cout << "ievadi b ==>";
+    cin >> b;
+    
+    cout << (double) a/b
+}
+```
+
+### Loģiskie
+#### binārie
+- && loģiskais AND
+- || loģiskais OR
+#### unārie
+- ! loģiskais  NOT 
+
+<!-- ielikt bildi ar tabulu -->
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    cin << x;
+    cin << y;
+    sum =x+y;
+    if((x+y)%2){
+        cout >>  "para";
+    }
+    else {
+        cout >> "nepara";
+    }
+}
+```
+### Konvertacija
+c++
+```cpp
+y = (double) x
+```
+
+python
+```py
+y = int(x)
+```
+
+### Cikli
+#### Ar skaitītāju
+##### C++
+for (<1>; <2>; <3>){ \
+    <4> \
+}
+
+1. sākuma stāvokklis
+2. cikla nosacījums
+3. cikla solis 
+
+jebkurš var bīt tukšs
+
+```cpp
+// izdruka no 0-9
+for (int i=0; i<10; i++){
+    cout << i;
+    cout << endl;
+}
+```
+
+##### python
+for < var > in range (< from >, < to > *< step >*):\
+    < commands >
+    
+< var > - cikla mainīgais \
+< from > - sākuma vērtība \
+< to > - beigu vērtība (ja grib 5 jāliek 6) \
+*< step >* - opcionāls
+
