@@ -10,15 +10,26 @@ Programma izveidota 08.09.2026.
 int main() {
   int n;
   bool x = true;
+  bool x2 = true;
 
   while (x) {
-    std ::cout << "ievadi n==>";
-    std ::cin >> n;
+    // Atkārto ievadi līdz ievada naturālu skaitli.
+    while (x2) {
+      std ::cout << "ievadi n==>";
+      std ::cin >> n;
+
+      // Ja ir naturāls skaitlis iziet no cikla un turpina programmu.
+      if (n > 0) {
+        x2 = false;
+      } else {
+        std ::cout << "Ievadi naturālu skaitli\n";
+      }
+    }
 
     // Iet cauri katram skaitlim no 1 līdz n un pārbauda.
-    for (int y = 1; y <= n; y++) {
-      if (n % (y * y) == 0) {
-        std ::cout << y;
+    for (int i = 1; i <= n; i++) {
+      if (n % (i * i) == 0) {
+        std ::cout << i;
         std ::cout << "\n";
       }
     }
@@ -35,6 +46,6 @@ int main() {
       36       |      1 2 3 6
       25       |      1 5
       66       |      1
-      -30      |
-      0        |
+      -30      |      Ievadi naturālu skaitli
+      0        |      Ievadi naturālu skaitli
 *********************************/

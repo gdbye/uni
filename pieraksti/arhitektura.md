@@ -111,4 +111,7 @@ Uzlabo uzticamību, drošumu ar papildus rezervēm
 
 ## Zem vāka
 
+## skaitīšanas sistēmas
+skaitīšana decimālajā, oktālā, heksadecimālā un binārā
+
 

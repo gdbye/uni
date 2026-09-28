@@ -23,6 +23,24 @@ int digit_sum(int x) {
   return sum;
 }
 
+// Ievades kontrole priekš naturāla skaitļa
+int input() {
+  int x;
+  // Atkārto ievadi līdz ievada naturālu skaitli.
+  while (true) {
+    cout << "ievadi x==>";
+    cin >> x;
+
+    // Ja ir naturāls skaitlis iziet no cikla un turpina programmu.
+    if (x > 0) {
+      break;
+    } else {
+      cout << "Ievadi naturālu skaitli";
+    }
+  }
+  return x;
+}
+
 // Pārbauda vai ir patiess un izprintē to ja iznākums ir derīgs
 void test(int x_digit, int x, int y, int z) {
   if (x_digit == abs(y - z))
@@ -35,14 +53,9 @@ int main() {
   int x_digit, y_digit, z_digit;
 
   while (n) {
-    cout << "Ievadi x==>";
-    cin >> x;
-
-    cout << "Ievadi y==>";
-    cin >> y;
-
-    cout << "Ievadi z==>";
-    cin >> z;
+    x = input();
+    y = input();
+    z = input();
 
     x_digit = digit_sum(x);
     y_digit = digit_sum(y);

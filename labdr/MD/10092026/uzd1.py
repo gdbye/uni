@@ -1,11 +1,17 @@
 """
 Jānis Bašēns, jb26076
 A8. Dots naturāls skaitlis n. Izdrukāt tos skaitļa n reizinātājus, kuri ir kāda
-naturāla skaitļa kvadrāti. Programma izveidota 08.09.2026.
+naturāla skaitļa kvadrāti.
 Programma izveidota 08.09.2026.
 """
 
-x = int(input("Ievadi n=>"))
+# Prasa ievadi kamēr nav ievadīts naturāls skaitlis.
+while True:
+    x = int(input("Ievadi n=>"))
+    if x > 0:
+        break
+    else:
+        print("Ievadi naturālu skaitli")
 
 # Pārbauda no 1 līdz n skaitlim vai ir derīgs un izprintē to.
 for y in range(x):
@@ -14,11 +20,12 @@ for y in range(x):
 
 
 """
-    ievade     |      paredzamais rezultāts
+  ievade       |      paredzamais rezultāts
 ------------------------------
       36       |      1 2 3 6
       25       |      1 5
       66       |      1
-      -30      |
-      0        |
+      -30      |      Ievadi naturālu skaitli
+      0        |      Ievadi naturālu skaitli
+
 """

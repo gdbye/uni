@@ -237,6 +237,7 @@ python
 y = int(x)
 ```
 
+## 4. stunda
 ### Cikli
 #### Ar skaitītāju
 ##### C++
@@ -267,3 +268,87 @@ for < var > in range (< from >, < to > *< step >*):\
 < to > - beigu vērtība (ja grib 5 jāliek 6) \
 *< step >* - opcionāls
 
+#### Ar priekšnosacījumu *while*
+##### C++
+```cpp
+while (loģiskā izteiksme){
+    ...
+}
+```
+Sākuma vērtības jāpieškir pirms cikla
+
+###### Piemērs
+izprintēt no 0 līdz 9
+```cpp
+int i = 0;
+while (i<10){
+    cout << i << endl;
+    i++;
+}
+```
+
+##### python
+```py
+while <loģiska izteiksme>:
+  ...
+```
+###### piemers
+```py
+x=0
+while x<10:
+    print(x)
+    x+=1
+```
+
+#### Ar pēcnosacījumu
+##### C++
+``` cpp
+do {
+    ...
+} while (<loģiskā izteiksme>)
+```
+
+###### piemers
+```cpp
+int i=0;
+do {
+    cout << i << endl;
+    i++;
+} while (i<10);
+```
+##### python
+NAV
+
+#### break and continue
+
+1. break
+- nodod vadību laukā no cikla nākamajai komandai
+2. continue
+- nodod vadību nākamajai cikla iterācijai (for cikla gadījumā izpildot arī pēc-iterācijas darbību (-as))
+3. goto
+- nodod vadību citai patvaļīgai komandai (nav ieteicams izmantot, jo padara kodu nelasāmu)
+
+#### uzd
+
+```cpp
+cin >> x;
+bool isPrime = true;
+
+if (x<=1){
+    cout << "nav";
+}
+
+for (int i = 2; i = n/2; i++){
+    if(n%i==0){
+        cout << "nav";
+        isPrime = false;
+        break;      
+    }
+}
+
+if (isPrime){
+    cout << "ir";
+}
+```
+
+### Funkcijas

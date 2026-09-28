@@ -10,13 +10,19 @@ Programma izveidota 08.09.2026.
 
 # Ievada skaitli x, un saskaita tā ciparu summas
 def digit_sum():
-    x = int(input("ievadi skaitli =>"))
-    temp = x
+    # Cikls, kas atkārtojas kamēr nav ievadīts naturālss skaitlis
+    while True:
+        n = int(input("Ievadi n=>"))
+        if n > 0:
+            break
+        else:
+            print("Ievadi naturālu skaitli")
+    temp = n
     sum = 0
     while temp > 0:
         sum += temp % 10
         temp //= 10
-    return sum, x
+    return sum, n
 
 
 # Pārbauda vai ir patiess un izprintē to ja iznākums ir derīgs
