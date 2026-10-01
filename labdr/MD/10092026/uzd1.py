@@ -5,11 +5,13 @@ naturāla skaitļa kvadrāti.
 Programma izveidota 08.09.2026.
 """
 
+isTrue = True
+
 # Prasa ievadi kamēr nav ievadīts naturāls skaitlis.
-while True:
+while isTrue:
     x = int(input("Ievadi n=>"))
     if x > 0:
-        break
+        isTrue = False
     else:
         print("Ievadi naturālu skaitli")
 

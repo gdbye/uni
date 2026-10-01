@@ -26,14 +26,15 @@ int digit_sum(int x) {
 // Ievades kontrole priekš naturāla skaitļa
 int input() {
   int x;
+  bool isTrue = true;
   // Atkārto ievadi līdz ievada naturālu skaitli.
-  while (true) {
+  while (isTrue) {
     cout << "ievadi x==>";
     cin >> x;
 
     // Ja ir naturāls skaitlis iziet no cikla un turpina programmu.
     if (x > 0) {
-      break;
+      isTrue = false;
     } else {
       cout << "Ievadi naturālu skaitli";
     }
@@ -49,10 +50,10 @@ void test(int x_digit, int x, int y, int z) {
 
 int main() {
   int x, y, z;
-  bool n = true;
+  bool repeat = true;
   int x_digit, y_digit, z_digit;
 
-  while (n) {
+  while (repeat) {
     x = input();
     y = input();
     z = input();
@@ -66,7 +67,7 @@ int main() {
     test(z_digit, z, x, y);
 
     cout << "vai vēlies vēlreiz? \n1 == Jā | 0 == Nē \n==>";
-    cin >> n;
+    cin >> repeat;
   }
   return 0;
 }

@@ -10,11 +10,12 @@ Programma izveidota 08.09.2026.
 
 # Ievada skaitli x, un saskaita tā ciparu summas
 def digit_sum():
+    isTrue = True
     # Cikls, kas atkārtojas kamēr nav ievadīts naturālss skaitlis
-    while True:
+    while isTrue:
         n = int(input("Ievadi n=>"))
         if n > 0:
-            break
+            isTrue = False
         else:
             print("Ievadi naturālu skaitli")
     temp = n

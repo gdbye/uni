@@ -9,18 +9,18 @@ Programma izveidota 08.09.2026.
 
 int main() {
   int n;
-  bool x = true;
-  bool x2 = true;
+  bool repeat = true;
+  bool isTrue = true;
 
-  while (x) {
+  while (repeat) {
     // Atkārto ievadi līdz ievada naturālu skaitli.
-    while (x2) {
+    while (isTrue) {
       std ::cout << "ievadi n==>";
       std ::cin >> n;
 
       // Ja ir naturāls skaitlis iziet no cikla un turpina programmu.
       if (n > 0) {
-        x2 = false;
+        isTrue = false;
       } else {
         std ::cout << "Ievadi naturālu skaitli\n";
       }
@@ -36,6 +36,7 @@ int main() {
 
     std::cout << "vai vēlies vēlreiz? \n1 == Jā | 0 == Nē \n==>";
     std::cin >> x;
+    isTrue = true;
   }
   return 0;
 }
