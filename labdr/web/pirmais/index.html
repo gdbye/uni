@@ -9,6 +9,19 @@
 </head>
 
 <body>
+  <div id="modal" class="modal">
+    <!-- Šeit nav pabeigts, līdz 30.09.2026. centīšos -->
+    <form id="music">
+      <p>Vai gribi fonā mūziku?</p>
+      <input type="radio" id="music-yes" name="music" value="yes">
+      <label for="music-yes">Jā</label>
+      <br>
+      <input type="radio" id="music-no" name="music" value="no">
+      <label for="music-no">Nē</label>
+      <br>
+      <input type="submit" value="Iesniegt">
+    </form>
+  </div>
 
   <h1 id="sakums">MINECRAFT</h1>
 
@@ -19,7 +32,7 @@
 
   <h2>Saturs</h2>
   <ul>
-    <li><a href="#kas-ir-minecraft">Kas ir Minecraft?</a></li>
+    <li><a href="#kas-ir-minecraft">Kas ir Minecraft&#63;</a></li>
     <li><a href="#ka-spelet">Kā spēlēt?</a></li>
     <li><a href="#buvnieciba">Ko citi ir uzbūvējuši?</a></li>
     <li><a href="#video">Minecraft video</a></li>
@@ -33,7 +46,7 @@
     ir <i>Sandbox</i> spēle, kas domāta jebkuram vecumam un cilvēkam.
     Spēles izskats ir unikāls, jo visa pasaule eksistē kantainos blokos,
     kur iespējams izpētīt pasauli ar kalniem, lieliem okeāniem, milzu
-    tuksnešiem u. c. lietām, jo spēli var mainīt ar modiem.
+    tuksnešiem u. c. lietām, jo <mark>spēli var mainīt ar modiem</mark>&#46;
   </p>
 
   <p>
@@ -78,7 +91,7 @@
   <p>
     Lai izdzīvotu pirmajās spēles dienās, vajadzētu pēc iespējas ātrāk
     uzbūvēt patvērumu. Tajā var paslēpties no monstriem un droši
-    pārnakšņot. Ir svarīgi arī savākt ēdienu, izveidot instrumentus un
+    pārnakšņot. Ir svarīgi arī savākt ēdienu&#44; izveidot instrumentus un
     iegūt bruņas. Vēlāk spēlētājs var uzbūvēt lielāku māju, fermu un
     izveidot labākus ieročus.
   </p>
@@ -163,7 +176,6 @@
     </li>
   </ul>
 
-
   <h2>Interesanti fakti</h2>
 
   <ul>
@@ -180,7 +192,7 @@
   <iframe src="https://www.youtube.com/embed/MmB9b5njVbA" title="Minecraft video" allowfullscreen>
   </iframe>
   <strong>Stock minecraft video</strong>
-  <video width="" height="" controls>
+  <video controls>
     <source src="gameplay.mp4" type="video/mp4">
   </video>
 
@@ -209,6 +221,7 @@
     </p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 
 </html>
