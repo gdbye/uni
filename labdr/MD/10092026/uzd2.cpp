@@ -28,7 +28,6 @@ int digit_sum(int x) {
   return sum;
 }
 
-// Ievades kontrole priekš naturāla skaitļa
 /**************************************
 int input();
 Funkija input()
@@ -49,7 +48,6 @@ int input() {
   return n;
 }
 
-// Pārbauda vai ir patiess un izprintē to ja iznākums ir derīgs
 /********************************
 void test(int x_digit, int x, int y, int z);
 Funkcija test(x_digit, x, y, z)
@@ -68,17 +66,17 @@ int main() {
   int x_digit, y_digit, z_digit;
 
   while (repeat) {
-    // Ievada naturālos skaitļus
+    // Ievada naturālos skaitļus.
     x = input();
     y = input();
     z = input();
 
-    // Saskaita katram ievadītam naturālam skaitlim ciparu summu
+    // Saskaita katram ievadītam naturālam skaitlim ciparu summu.
     x_digit = digit_sum(x);
     y_digit = digit_sum(y);
     z_digit = digit_sum(z);
 
-    // Pārbauda uzdevuma nosacījumu
+    // Pārbauda uzdevuma nosacījumu.
     test(x_digit, x, y, z);
     test(y_digit, y, x, z);
     test(z_digit, z, x, y);

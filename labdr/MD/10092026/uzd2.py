@@ -18,7 +18,7 @@ Funkija input()
 
 
 def ievade():
-    n = int(input("Ievadiet naturālu skaitli n, n>=1: "))
+    n = int(input("Ievadiet naturālu skaitli n, (n>=1): "))
     while n < 1:
         n = int(input("Neder, Ievadi naturālu skatli(n>=1)==>"))
     return n
@@ -56,14 +56,17 @@ def test(x_digit, y, z, x):
         print(x)
 
 
+# Ievada naturālos skaitļus.
 a = ievade()
 b = ievade()
 c = ievade()
 
+# Saskaita katram ievadītam naturālam skaitlim ciparu summu.
 a_digit, a = digit_sum()
 b_digit, b = digit_sum()
 c_digit, c = digit_sum()
 
+# Pārbauda uzdevuma nosacījumu.
 test(a_digit, b, c, a)
 test(b_digit, a, c, b)
 test(c_digit, a, b, c)

@@ -11,7 +11,7 @@ int main() {
   int n;
   bool repeat = true;
   while (repeat) {
-    // Pārbauda vai ievada naturālu skaitli
+    // Pārbauda vai ievada naturālu skaitli.
     do {
       cout << "Ievadiet naturālu skaitli(n>=1)==> ";
       cin >> n;

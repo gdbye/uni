@@ -5,7 +5,7 @@ naturāla skaitļa kvadrāti.
 Programma izveidota 08.09.2026.
 """
 
-# Pārbauda vai ir ievadīts naturāls skaitlis
+# Pārbauda vai ir ievadīts naturāls skaitlis.
 n = int(input("Ievadiet naturālu skaitli n, n>=1: "))
 while n < 1:
     n = int(input("Neder, Ievadi naturālu skatli(n>=1)==>"))
