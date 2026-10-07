@@ -7,17 +7,33 @@ funkciju, kas aprēķina skaitļa ciparu summu.
 Programma izveidota 08.09.2026.
 """
 
+"""
+int input();
+Funkija input()
+  Prasa ievadīt naturālu skaitli
+  Pārbauda vai ir naturāls skaitliski
+  Ja nav tad atkārtoti prasa ievadi
+  Ja ir tad atgriež ievadīto skaitli
+"""
 
-# Ievada skaitli x, un saskaita tā ciparu summas
+
+def ievade():
+    n = int(input("Ievadiet naturālu skaitli n, n>=1: "))
+    while n < 1:
+        n = int(input("Neder, Ievadi naturālu skatli(n>=1)==>"))
+    return n
+
+
+"""
+int digit_sum(int x);
+funkcija digit_sum(x)
+  Saskaita dotā naturālā skaitļa ciparu summu
+  un to atgriež
+"""
+
+
 def digit_sum():
-    isTrue = True
-    # Cikls, kas atkārtojas kamēr nav ievadīts naturālss skaitlis
-    while isTrue:
-        n = int(input("Ievadi n=>"))
-        if n > 0:
-            isTrue = False
-        else:
-            print("Ievadi naturālu skaitli")
+    n = ievade()
     temp = n
     sum = 0
     while temp > 0:
@@ -26,11 +42,23 @@ def digit_sum():
     return sum, n
 
 
-# Pārbauda vai ir patiess un izprintē to ja iznākums ir derīgs
+"""
+def test(int x_digit, int x, int y, int z);
+Funkcija test(x_digit, x, y, z)
+  Pārbauda uzdevuma nosacījumus
+  Ja piepildās izprintē x
+  Ja nepiepildās neko neizprintē
+"""
+
+
 def test(x_digit, y, z, x):
     if x_digit == abs(y - z):
         print(x)
 
+
+a = ievade()
+b = ievade()
+c = ievade()
 
 a_digit, a = digit_sum()
 b_digit, b = digit_sum()
@@ -46,4 +74,5 @@ test(c_digit, a, b, c)
     12 25 20   |
     15 20 23   |      23
     12 20 23   |      12
+  -12 12 25 20 | Kļūdaina vērtība. Jāievada naturalu skaitli, n>=1.
 """

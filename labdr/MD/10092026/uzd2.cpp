@@ -11,7 +11,12 @@ funkciju, kas aprēķina skaitļa ciparu summu.
 Programma izveidota 08.09.2026.
 **********************/
 
-// Saskaita skaitļa ciparu summu
+/**************************
+int digit_sum(int x);
+funkcija digit_sum(x)
+  Saskaita dotā naturālā skaitļa ciparu summu
+  un to atgriež
+***************************/
 int digit_sum(int x) {
   int sum = 0;
 
@@ -24,25 +29,34 @@ int digit_sum(int x) {
 }
 
 // Ievades kontrole priekš naturāla skaitļa
+/**************************************
+int input();
+Funkija input()
+  Prasa ievadīt naturālu skaitli
+  Pārbauda vai ir naturāls skaitliski
+  Ja nav tad atkārtoti prasa ievadi
+  Ja ir tad atgriež ievadīto skaitli
+**************************************/
 int input() {
-  int x;
-  bool isTrue = true;
-  // Atkārto ievadi līdz ievada naturālu skaitli.
-  while (isTrue) {
-    cout << "ievadi x==>";
-    cin >> x;
+  int n;
+  do {
+    cout << "Ievadiet naturālu skaitli n, n>=1==>" << endl;
+    cin >> n;
+    if (n < 1)
+      cout << "Kļūdaina vērtība. Jāievada naturalu skaitli, n>=1." << endl;
+  } while (n < 1);
 
-    // Ja ir naturāls skaitlis iziet no cikla un turpina programmu.
-    if (x > 0) {
-      isTrue = false;
-    } else {
-      cout << "Ievadi naturālu skaitli";
-    }
-  }
-  return x;
+  return n;
 }
 
 // Pārbauda vai ir patiess un izprintē to ja iznākums ir derīgs
+/********************************
+void test(int x_digit, int x, int y, int z);
+Funkcija test(x_digit, x, y, z)
+  Pārbauda uzdevuma nosacījumus
+  Ja piepildās izprintē x
+  Ja nepiepildās neko neizprintē
+********************************/
 void test(int x_digit, int x, int y, int z) {
   if (x_digit == abs(y - z))
     cout << x << "\n";
@@ -54,14 +68,17 @@ int main() {
   int x_digit, y_digit, z_digit;
 
   while (repeat) {
+    // Ievada naturālos skaitļus
     x = input();
     y = input();
     z = input();
 
+    // Saskaita katram ievadītam naturālam skaitlim ciparu summu
     x_digit = digit_sum(x);
     y_digit = digit_sum(y);
     z_digit = digit_sum(z);
 
+    // Pārbauda uzdevuma nosacījumu
     test(x_digit, x, y, z);
     test(y_digit, y, x, z);
     test(z_digit, z, x, y);
@@ -78,4 +95,5 @@ int main() {
     12 25 20   |
     15 20 23   |      23
     12 20 23   |      12
+  -12 12 25 20 | Kļūdaina vērtība. Jāievada naturalu skaitli, n>=1.
 *******************************/

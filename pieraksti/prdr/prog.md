@@ -352,3 +352,78 @@ if (isPrime){
 ```
 
 ### Funkcijas
+
+### 5. stunda
+#### Masīvi(c++) un sarkasti(python)
+
+##### c++ masīvi
+Masīvs ir konstrukcija, kas ļauj vienotā struktūrā saglabāt vairākas viena datu tipa vērtības (elementus)
+
+Veselu skaitļu masīva deklarēšana
+1. int x[5];
+    - mainīgajā x varēs saglabāt 5 veselus skaitļus
+2. int x[5]={17, -5, 0, 2, 2};
+    - deklarācijas brīdī drīkst piešķirt sākuma vērtības
+3. int x[5]={17, -5};
+    - drīkst piešķirt sākuma vērtības arī tikai dažiem pirmajiem masīva elementiem (pārējie paliek neinicializēti)
+
+Piekļuve masīva elementam
+- piekļuve notiek, norādot elementa kārtas numuru (indeksu) masīvā
+    - n elementu masīvam indeksi tiek numurēti no 0 līdz n-1
+- x[3] masīva x elements ar indeksu 3 (jeb pēc kārtas 4. elements)
+    - x[3] = 17;
+    - cin >> x[2];
+    - cout << x[4];
+    - int i=x[0];
+
+Masīvs uzskatāms tikai par elementu kopumu, tāpēc nekādas darbības ar pašu masīvu veikt nevar
+```cpp
+int m[5]={1,2,3,4,5}, n[5];
+n=m; //Šādi darīt nevar!
+if (n==m) ... //Šādi darīt nevar!
+```
+
+Masīva elementus iespējams apstrādāt vienotā veidā
+- veido ciklu, katrā iterācijā apstrādājot vienu masīva elementu
+- par elementa indeksu kalpo cikla skaitītājs
+
+```cpp
+int x[5];
+for (int i=0; i<5; i++)
+  cin >> x[i];
+```
+
+##### Python saraksti
+
+Saraksts ir konstrukcija, kas ļauj vienotā struktūrā saglabāt vairākas vērtības (elementus)
+- vērtības var būt dažādu tipu
+
+Saraksta izveidošana
+- arr = []
+    - mainīgajā arr ir tukšs saraksts
+- arr = [17, -5, 0, "abc", 2.5]
+
+Piekļuve saraksta elementiem
+- piekļuve notiek, norādot elementa kārtas numuru (indeksu) sarakstā
+    - n elementu sarakstam indeksi tiek numurēti no 0 līdz n-1
+- saraksta aktuālo garumu iespējams noskaidrot ar funkciju len
+```py
+arr = [17, -5, 0, "abc", 2.5]
+l=len(arr)
+print(l) # 5
+```
+- darbošanās ar saraksta indeksiem tiek pārbaudīta
+```py
+x = [17, -5, 0]
+x[5] = "def"
+#IndexError: list assignment index out of range
+```
+- elementa pievienošana un dzēšana
+```py
+arr.append(17)
+arr.pop()
+```
+
+#### Masīvu dimensijas
+C++ ir n-dimensiju masīvi iespējamaji
+

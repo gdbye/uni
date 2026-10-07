@@ -5,19 +5,15 @@ naturāla skaitļa kvadrāti.
 Programma izveidota 08.09.2026.
 """
 
-isTrue = True
+# Pārbauda vai ir ievadīts naturāls skaitlis
+n = int(input("Ievadiet naturālu skaitli n, n>=1: "))
+while n < 1:
+    n = int(input("Neder, Ievadi naturālu skatli(n>=1)==>"))
 
-# Prasa ievadi kamēr nav ievadīts naturāls skaitlis.
-while isTrue:
-    x = int(input("Ievadi n=>"))
-    if x > 0:
-        isTrue = False
-    else:
-        print("Ievadi naturālu skaitli")
 
 # Pārbauda no 1 līdz n skaitlim vai ir derīgs un izprintē to.
-for y in range(x):
-    if x % ((y + 1) ** 2) == 0:
+for y in range(n):
+    if n % ((y + 1) ** 2) == 0:
         print(y + 1)
 
 
