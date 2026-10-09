@@ -8,7 +8,7 @@ Programma izveidota 08.09.2026.
 """
 
 """
-int input();
+def ievade();
 Funkija input()
   Prasa ievadīt naturālu skaitli
   Pārbauda vai ir naturāls skaitliski
@@ -25,25 +25,28 @@ def ievade():
 
 
 """
-int digit_sum(int x);
+def digit_sum(int x);
+  x => naturāls skaitlis kam skaitīs ciparu summu
 funkcija digit_sum(x)
   Saskaita dotā naturālā skaitļa ciparu summu
-  un to atgriež
+  un atgriež summu
 """
 
 
-def digit_sum():
-    n = ievade()
-    temp = n
+def digit_sum(x):
     sum = 0
-    while temp > 0:
-        sum += temp % 10
-        temp //= 10
-    return sum, n
+    while x > 0:
+        sum += x % 10
+        x //= 10
+    return sum
 
 
 """
 def test(int x_digit, int x, int y, int z);
+  x_digit => izmanto lai salīdzinātu ar y un z starpību
+  x => Lai izprintētu
+  y => izmanto starpības noteikšanā
+  z => izmanto starpības noteikšanā
 Funkcija test(x_digit, x, y, z)
   Pārbauda uzdevuma nosacījumus
   Ja piepildās izprintē x
@@ -55,21 +58,24 @@ def test(x_digit, y, z, x):
     if x_digit == abs(y - z):
         print(x)
 
+repeat = True
+while repeat:
+  # Ievada naturālos skaitļus.
+  a = ievade()
+  b = ievade()
+  c = ievade()
 
-# Ievada naturālos skaitļus.
-a = ievade()
-b = ievade()
-c = ievade()
+  # Saskaita katram ievadītam naturālam skaitlim ciparu summu.
+  a_digit = digit_sum(a)
+  b_digit = digit_sum(b)
+  c_digit = digit_sum(c)
 
-# Saskaita katram ievadītam naturālam skaitlim ciparu summu.
-a_digit, a = digit_sum()
-b_digit, b = digit_sum()
-c_digit, c = digit_sum()
+  # Pārbauda uzdevuma nosacījumu.
+  test(a_digit, b, c, a)
+  test(b_digit, a, c, b)
+  test(c_digit, a, b, c)
 
-# Pārbauda uzdevuma nosacījumu.
-test(a_digit, b, c, a)
-test(b_digit, a, c, b)
-test(c_digit, a, b, c)
+  repeat = bool(input("Vai turpināt (1) vai beigt (0)==>")))
 
 """
     ievade     |      paredzamais rezultāts

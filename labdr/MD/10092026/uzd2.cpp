@@ -1,4 +1,3 @@
-#include <cmath>
 #include <iostream>
 using namespace std;
 
@@ -12,10 +11,11 @@ Programma izveidota 08.09.2026.
 **********************/
 
 /**************************
-int digit_sum(int x);
-funkcija digit_sum(x)
+ int digit_sum(int x);
+  x => naturāls skaitlis kam skaitīs ciparu summu
+ funkcija digit_sum(x)
   Saskaita dotā naturālā skaitļa ciparu summu
-  un to atgriež
+  un atgriež summu
 ***************************/
 int digit_sum(int x) {
   int sum = 0;
@@ -39,10 +39,11 @@ Funkija input()
 int input() {
   int n;
   do {
-    cout << "Ievadiet naturālu skaitli n, n>=1==>" << endl;
+    cout << "Ievadiet naturālu skaitli n, n>=1==>";
     cin >> n;
-    if (n < 1)
+    if (n < 1) {
       cout << "Kļūdaina vērtība. Jāievada naturalu skaitli, n>=1." << endl;
+    }
   } while (n < 1);
 
   return n;
@@ -50,6 +51,10 @@ int input() {
 
 /********************************
 void test(int x_digit, int x, int y, int z);
+  x_digit => izmanto lai salīdzinātu ar y un z starpību
+  x => Lai izprintētu
+  y => izmanto starpības noteikšanā
+  z => izmanto starpības noteikšanā
 Funkcija test(x_digit, x, y, z)
   Pārbauda uzdevuma nosacījumus
   Ja piepildās izprintē x
