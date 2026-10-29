@@ -427,3 +427,199 @@ arr.pop()
 #### Masīvu dimensijas
 C++ ir n-dimensiju masīvi iespējamaji
 
+
+
+### 6. stunda
+#### char datu tips
+Simboli ir sakārtoti simbolu tabulā
+
+Piemēram:
+- ASCII
+- EBCDIC
+- HTML codes
+- ...
+
+Jebkurā tabulā vienkopus pēc kārtas atrodas:
+- latīņu alfabēta
+    - mazie burti
+    - lielie burti
+- cipari
+
+#### char un int saistiba
+```cpp
+char c = "a";
+int i = c;
+cout << i; //izvada 97
+```
+```cpp
+int i = 52;
+char c = i;
+cout << c; //izvada '4'
+```
+
+```cpp
+//Salīdzināšanas operacijas
+char c;
+cin >> c;
+if (c>='A' && c<='Z'){
+    cout << "Ir lielais burts\n";
+}
+```
+
+```cpp
+//Aritmētiskās operacijas
+char c;
+cin >> c;
+int i = c - '0';
+```
+
+#### Simbolu virkne
+Zema - char masīvs
+Augsta - string main;igais
+
+Simbolu virkne ir masīvi
+
+##### Zema
+Jābeidzas ar \0
+
+### 7. Stunda
+##### Dinamiskās datu struktūras
+##### Kas ir dinamiska datu struktūra
+Dinamisks - kompilācijas laikā nav izdalīta atmiņa, bet pēc vajadzības var izdalīt izpildes laikā
+
+Dinamiska datu struktūra - struktūra kurā tiek glabāta dinamiskajā atmiņā un kurai var piekļūt caur statiskajai atmiņā esošu norādi
+
+Dinamisku datu struktūru veidošanas motivācija – statiskās atmiņas taupīšana (pati norāde aizņem maz vietas)
+
+##### Norāde (pointer)
+Norāde
+- < typeName > * < variableName >
+  - int * x 
+  - char * s
+- pati norāde (neatkarīgi no datu tipa, uz kura mainīgo tā norāda) aizņem 4 baitus statiskajā atmiņā
+- norāde ir vesels skaitlis (norādītās informācijas atmiņas adrese) heksadecimālajā pierakstā
+```cpp
+int * x = new int;
+cout << x; // 0x3d3cb8
+int * x = new int;
+int y = (int)x;
+cout << y; // 4013240
+```
+- norādes izmantošana
+```cpp
+int * x = NULL; //NULL adrese nozīmē, ka x nenorāda nekur
+x = new int; //izveidot vietu skaitlim dinamiskajā atmiņā un likt x norādīt uz šo vietu
+*x = 17; //Vietā, uz kuru norāda x, ierakstīt 17
+cout << *x; //Izdrukāt to, kas atrodas vietā, uz kuru norāda x
+delete x; //Atbrīvo t atmiņas vietu (viena skaitļa garumā), uz kuru norāda x
+
+```
+
+##### Adrese 
+Adrese
+- vesels skaitlis pieļaujamā atmiņas adresācijas intervālā
+- parasti pierakstīts heksadecimālajā pierakstā
+- jebkuram mainīgajam var noskaidrot tā adresi, izmantojot adreses ņemšanas operatoru &
+```cpp
+int x;
+int y = (int)&x;
+cout << &x << " " << y; //0x22ff74 2293620
+```
+- adresi kā vērtību var piešķirt norādei
+```cpp
+int x;
+int * y;
+y = &x;
+cout << y; //0x22ff74
+```
+```cpp
+int x = 5, * y = &x;
+*y = 17;
+cout << x; // 17
+```
+
+##### Refrence
+- iespēja piekļūt vienam un tam pašam atmiņas apgabalam ar dažādiem mainīgajiem
+- jēdziens pazīstams no funkcijām – parametru var nodot kā vērtību vai kā referenci
+- izmantošana
+```cpp
+int x = 5;
+int & y = x; // Deklarējot referenci, jānorāda tās atrašanās vieta atmiņā
+cout << x << y; // 55
+y = 7;
+cout << x << y; // 77
+```
+
+### 8. stunda
+#### Statiski un dinamiski masīvi
+- Statiski masīvi
+    - viss masīvs atrpdas statiskajā atmiņā
+    - masīva elemntu skaits jāzina jau programmas kompilācijas (rakstīšanas) brīdī
+    - visi demonstrētie masīvi bija statiski
+- Dinamiski masīvi
+    - viss masīvs atrodas dinamiskajā atmiņā
+    - statiskajā atmiņā atrodas norāde uz masīva sākumu
+    - masīva elementu skaits kompilācijas brīdī var nebūt zināms
+
+#### Darbs ar dinnamisku masīvu C++
+- Statiskajā atmiņā jāizveido mainīgais (norāde), kas norādīs uz dinamisko masīvu
+    - ```int * mas; <- mas – norāde uz int tipa masīvu```
+- Dinamiskajā atmiņā jāizveido masīvs un jāuzliek iepriekš izveidotā norāde uz to
+    - ```mas = new int[5];```
+- Darbs ar masīvu identisks kā statiska masīva gadījumā
+    - ```mas[3]=17;```
+- Darba beigās masīvs no dinamiskās atmiņas jāizdzēš
+    - ```delete [] mas;```
+
+##### Piemērs
+Lietotājs ievada veselu pozitīvu skaitli n. Ļaut lietotājam ievadīt n veselus skaitļus un pēc tam izdrukāt tos pretējā secībā
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+  int * m, n;
+  cin >> n;
+  m = new int[n];
+  for (int i=0;i<n;i++) cin >> m[i];
+  for (int i=n-1;i>=0;i--) cout << m[i] << endl;
+  delete [] m;
+  return 0;
+}
+```
+#### Ko īsti zinam par masīviem C++?
+- Visi masīva elementi atmiņā atrodas viens aiz otra
+- Masīvu identificē tā vārds
+    - patiesībā – vārds ir mainīgais, kas norāda uz masīva sākuma elementu
+- Masīvam ir noteikts garums
+    - tas tiek noteikts masīva izveidošanas brīdī un pēc tam nav maināms
+
+#### Kā C++ funkcijai nodot masīvu caur parametru?
+- Nav jēgas nodot visus elementus
+- Jānodod pēc iespējas mazāk informācijas, no kuras var iegūt pilnu informāciju par masīvu
+    - norāde uz pirmo elementu
+        - pārējiem elementiem var piekļūt, ejot uz priekšu pa atmiņas šūnām
+    - masīva garums
+        - lai zinātu, kur apstāties, ejot uz priekšu pa masīva šūnām no pirmā elementa
+        - ja masīvs ir simbolu virkne, garumu nodot nav nepieciešams!
+
+#### Piemērs masīva nodošanai caur parametru C++
+- Maksimālā elementa atrašana veselu skaitļu masīvā
+```cpp
+int getMax(int * mas, int n) {
+ int maxNum=mas[0];
+ for (int i=1; i<n; i++)
+  if (mas[i]>maxNum) maxNum=mas[i];
+ return maxNum;
+}
+```
+- Simbolu virknes garuma noteikšanas funkcija
+```cpp
+int len(char * s) {
+ int i=0;
+ while (s[i]!='\0') i++;
+ return i;
+}
+```
+32 A->a

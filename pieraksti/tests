@@ -1,0 +1,26 @@
+QQ Kadi ir abstrakcijas līmeņi?
+AA CPU
+AA OS kodols
+AA Datora pelīte
+AA Monitors
+AA Mikrofons
+
+QQ Kāda veida monitori eksistē?
+AA CRT
+AA LCD
+AA ABF
+AA XYZ
+AA VHG
+
+QQ Kāda veida atmiņa eksistē?
+AA Non-volatile
+AA Volatile
+AA Optical
+AA Virtual
+AA Temporary
+
+
+TT:help_convert
+MM:Skaitīšanas sistēmu pārveidošana
+GG:Spēle parāda skaitli kādā no skaitīšanas sistēmām un jāievada citā
+RR:Spēle izdomā kādu skaitli no 4 skaitīšanas sistēmām un izdomā uz kuru ir jāpārveido, piemēram, 10 BIN uz DEC jāpārveido, jāievada ir 2 priekš pareizas atbildes. Kā arī var ieviest pārveidošanu no pozitīva uz negatīvo vai no negatīva uz pozitīvo ar konkrētu metodi, vai DEC ar komatiem pārveidot uz BIN.

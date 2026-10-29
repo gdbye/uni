@@ -12,9 +12,8 @@ Programma izveidota 08.09.2026.
 
 /**************************
  int digit_sum(int x);
-  x => naturāls skaitlis kam skaitīs ciparu summu
  funkcija digit_sum(x)
-  Saskaita dotā naturālā skaitļa ciparu summu
+  Saskaita dotā naturālā skaitļa x ciparu summu
   un atgriež summu
 ***************************/
 int digit_sum(int x) {
@@ -32,9 +31,9 @@ int digit_sum(int x) {
 int input();
 Funkija input()
   Prasa ievadīt naturālu skaitli
-  Pārbauda vai ir naturāls skaitliski
-  Ja nav tad atkārtoti prasa ievadi
-  Ja ir tad atgriež ievadīto skaitli
+  Pārbauda, vai ir naturāls skaitliski
+  Ja nav, tad atkārtoti prasa ievadi
+  Ja ir, tad atgriež ievadīto skaitli
 **************************************/
 int input() {
   int n;

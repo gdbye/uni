@@ -1,0 +1,169 @@
+/*Jānis Bašēns jb26076*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  --primary: #075b6b;
+  --accent: #e3a64b;
+  --bg: #eef7f8;
+  --white: #fff;
+  --border: #c8dfe2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  color: #24343a;
+  background-color: var(--bg);
+  background-image: url("7168004.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font: 16px/1.6 'Montserrat', sans-serif;
+}
+
+#page {
+  max-width: 1000px;
+  margin: auto;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+.site-header {
+  padding: 25px;
+  text-align: center;
+  color: var(--white);
+  background: var(--primary);
+}
+
+.site-title,
+.section-title,
+.attraction-title {
+  font-family: 'Playfair Display', serif;
+}
+
+.main-nav {
+  text-align: center;
+  background: var(--bg);
+}
+
+.main-nav ul {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 5px;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.nav-link:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+main {
+  padding: 20px;
+}
+
+section,
+.attraction {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.section-title {
+  color: var(--primary);
+}
+
+.attraction-title {
+  color: var(--primary);
+}
+
+.photo {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.tips-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tips-heading {
+  color: var(--white);
+  background: var(--primary);
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid var(--border);
+}
+
+.tip-row:nth-child(even) {
+  background: var(--bg);
+}
+
+.note {
+  border: 1px dashed var(--accent);
+  padding: 12px;
+}
+
+.contact {
+  border: 2px dashed var(--primary);
+}
+
+a {
+  color: var(--primary);
+}
+
+.site-footer {
+  padding: 15px;
+  text-align: center;
+  color: var(--white);
+  background: var(--primary);
+}
+
+.footer-text {
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section,
+  .attraction {
+    padding: 12px;
+  }
+}

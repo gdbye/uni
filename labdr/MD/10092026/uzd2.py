@@ -11,9 +11,9 @@ Programma izveidota 08.09.2026.
 def ievade();
 Funkija input()
   Prasa ievadīt naturālu skaitli
-  Pārbauda vai ir naturāls skaitliski
-  Ja nav tad atkārtoti prasa ievadi
-  Ja ir tad atgriež ievadīto skaitli
+  Pārbauda, vai ir naturāls skaitliski
+  Ja nav, tad atkārtoti prasa ievadi
+  Ja ir, tad atgriež ievadīto skaitli
 """
 
 
@@ -25,11 +25,10 @@ def ievade():
 
 
 """
-def digit_sum(int x);
-  x => naturāls skaitlis kam skaitīs ciparu summu
+def digit_sum( x);
 funkcija digit_sum(x)
-  Saskaita dotā naturālā skaitļa ciparu summu
-  un atgriež summu
+  Saskaita dotā naturālā skaitļa x ciparu summu
+  un atgriež summu.
 """
 
 
@@ -42,7 +41,7 @@ def digit_sum(x):
 
 
 """
-def test(int x_digit, int x, int y, int z);
+def test( x_digit, x, y, z);
   x_digit => izmanto lai salīdzinātu ar y un z starpību
   x => Lai izprintētu
   y => izmanto starpības noteikšanā
@@ -58,24 +57,25 @@ def test(x_digit, y, z, x):
     if x_digit == abs(y - z):
         print(x)
 
+
 repeat = True
 while repeat:
-  # Ievada naturālos skaitļus.
-  a = ievade()
-  b = ievade()
-  c = ievade()
+    # Ievada naturālos skaitļus.
+    a = ievade()
+    b = ievade()
+    c = ievade()
 
-  # Saskaita katram ievadītam naturālam skaitlim ciparu summu.
-  a_digit = digit_sum(a)
-  b_digit = digit_sum(b)
-  c_digit = digit_sum(c)
+    # Saskaita katram ievadītam naturālam skaitlim ciparu summu.
+    a_digit = digit_sum(a)
+    b_digit = digit_sum(b)
+    c_digit = digit_sum(c)
 
-  # Pārbauda uzdevuma nosacījumu.
-  test(a_digit, b, c, a)
-  test(b_digit, a, c, b)
-  test(c_digit, a, b, c)
+    # Pārbauda uzdevuma nosacījumu.
+    test(a_digit, b, c, a)
+    test(b_digit, a, c, b)
+    test(c_digit, a, b, c)
 
-  repeat = bool(input("Vai turpināt (1) vai beigt (0)==>")))
+    repeat = bool(input("Vai turpināt (1) vai beigt (0)==>"))
 
 """
     ievade     |      paredzamais rezultāts
